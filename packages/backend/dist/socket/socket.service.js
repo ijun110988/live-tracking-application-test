@@ -15,7 +15,7 @@ let SocketService = class SocketService {
             console.log('Client connected:', socket.id);
             socket.on('getTrackers', () => {
                 console.log('Received getTrackers request from:', socket.id);
-                this.server.emit('trackersUpdate', []);
+                this.server.emit('trackersUpdate', this.getTrackers());
             });
             socket.on('disconnect', () => {
                 console.log('Client disconnected:', socket.id);
@@ -34,6 +34,9 @@ let SocketService = class SocketService {
             console.log('Mengirim update tracker dengan', trackers.length, 'tracker');
             this.server.emit('trackersUpdate', trackers);
         }
+    }
+    async getTrackers() {
+        return [];
     }
 };
 SocketService = __decorate([

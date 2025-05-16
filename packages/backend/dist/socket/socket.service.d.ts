@@ -5,4 +5,5 @@ export declare class SocketService {
     setServer(server: Server): void;
     getServer(): Server;
     emitTrackers(trackers: Tracker[]): void;
+    private getTrackers;
 }

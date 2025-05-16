@@ -18,7 +18,7 @@ export class SocketService {
             socket.on('getTrackers', () => {
                 console.log('Received getTrackers request from:', socket.id);
                 // Emit initial tracker data
-                this.server.emit('trackersUpdate', []); // Will be replaced with actual tracker data
+                this.server.emit('trackersUpdate', this.getTrackers()); // Mengirim data tracker yang sebenarnya
             });
 
             socket.on('disconnect', () => {
@@ -42,5 +42,10 @@ export class SocketService {
             console.log('Mengirim update tracker dengan', trackers.length, 'tracker');
             this.server.emit('trackersUpdate', trackers);
         }
+    }
+
+    private async getTrackers(): Promise<Tracker[]> {
+        // TODO: Implement this to fetch actual tracker data from database
+        return [];
     }
 }
