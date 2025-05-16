@@ -1,0 +1,13 @@
+
+> @live-tracking/frontend@1.0.0 build /Users/adeeptive5/Documents/Ijun/github/live-tracking-application-test/packages/frontend
+> tsc && vite build
+
+vite v4.5.14 building for production...
+transforming...
+✓ 11587 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.56 kB │ gzip:   0.35 kB
+dist/assets/index-69420918.css   15.65 kB │ gzip:   6.47 kB
+dist/assets/index-e31f6112.js   458.43 kB │ gzip: 143.23 kB
+✓ built in 21.88s

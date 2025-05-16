@@ -1,0 +1,23 @@
+{
+  "name": "@live-tracking/shared",
+  "version": "1.0.0",
+  "description": "Shared types and utilities for live tracking system",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "@types/geojson": "^7946.0.10"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
